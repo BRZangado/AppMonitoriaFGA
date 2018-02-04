@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="monitoriafga.trivia.com.monitoriafga.MainActivity">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/logo_app"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
+        android:id="@+id/gridLayout">
+
+        <EditText
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pesquisarId"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:backgroundTint="#22e600" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pesquisar"
+            android:id="@+id/buttonPesquisarId"
+            android:layout_row="0"
+            android:layout_column="2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:text="todas as monitorias"
+            android:id="@+id/botaoListagemCompleta"
+            android:layout_row="1"
+            android:layout_column="0" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/gridLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Monitorias acontecendo nesse momento:"
+            android:id="@+id/textViewTextoID"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:id="@+id/monitoriaNowListView"
+            android:layout_row="7"
+            android:layout_column="0" />
+    </GridLayout>
+
+</RelativeLayout>
